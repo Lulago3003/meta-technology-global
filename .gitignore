@@ -8,6 +8,9 @@ desktop.ini
 .idea/
 *.swp
 
+# Claude Code config local
+.claude/
+
 # Archivos temporales del proyecto (los videos originales con espacios)
 video de publicidad*.mp4
 

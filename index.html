@@ -917,6 +917,49 @@ footer{background:var(--g900);border-top:1px solid var(--bdr);padding:64px 0 28p
   .install-showcase{grid-template-columns:1fr;gap:24px;padding:20px}
 }
 
+/* ═══ TRUST BAR ════════════════════════════════════════════ */
+#trustbar{padding:44px 0 52px;background:var(--g950);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+.tb-label{text-align:center;font-size:.7rem;font-weight:600;color:var(--txt2);letter-spacing:1.4px;text-transform:uppercase;margin-bottom:24px}
+.tb-row{display:flex;justify-content:center;flex-wrap:wrap;gap:36px 56px;align-items:center}
+.tb-logo{font-family:var(--ff);font-size:.92rem;font-weight:700;color:rgba(220,229,226,.55);letter-spacing:1.5px;transition:color .2s;white-space:nowrap}
+.tb-logo span{font-weight:400;font-size:.78rem;color:rgba(220,229,226,.32);letter-spacing:1px;margin-left:4px}
+.tb-logo:hover{color:var(--grn-lt)}
+.tb-logo:hover span{color:var(--grn-lt);opacity:.7}
+@media(max-width:600px){
+  #trustbar{padding:32px 0 36px}
+  .tb-row{gap:18px 32px}
+  .tb-logo{font-size:.78rem;letter-spacing:1px}
+  .tb-logo span{font-size:.66rem}
+}
+
+/* ═══ PRICING SECTION ═════════════════════════════════════ */
+#pricing{background:var(--g900)}
+.pr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px;max-width:880px;margin-left:auto;margin-right:auto}
+.pr-card{position:relative;background:var(--card);border:1px solid var(--bdr);border-radius:18px;padding:40px 32px;transition:var(--tr)}
+.pr-card.featured{background:linear-gradient(160deg,rgba(20,184,166,.08),rgba(13,148,136,.04));border-color:rgba(20,184,166,.4);box-shadow:0 20px 60px rgba(20,184,166,.1),0 0 0 1px rgba(20,184,166,.15)}
+.pr-card:hover{transform:translateY(-3px);border-color:rgba(20,184,166,.3)}
+.pr-badge{position:absolute;top:-12px;right:24px;background:linear-gradient(135deg,var(--grn-dk),var(--grn));color:#fff;font-size:.66rem;font-weight:800;padding:6px 14px;border-radius:50px;letter-spacing:1.2px;text-transform:uppercase;box-shadow:0 4px 14px rgba(20,184,166,.4)}
+.pr-name{font-size:.85rem;font-weight:700;color:var(--grn-lt);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
+.pr-price{display:flex;align-items:baseline;gap:6px;margin-bottom:18px}
+.pr-price-num{font-size:2.6rem;font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1}
+.pr-price-cur{font-size:1rem;font-weight:600;color:var(--txt2)}
+.pr-price-per{font-size:.85rem;color:var(--txt2);font-weight:500}
+.pr-desc{font-size:.88rem;color:var(--txt);line-height:1.6;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--bdr)}
+.pr-feats{display:flex;flex-direction:column;gap:11px;margin-bottom:28px}
+.pr-feat{display:flex;align-items:flex-start;gap:11px;font-size:.86rem;color:var(--txt);line-height:1.5}
+.pr-feat .ico{color:var(--grn);margin-top:3px;flex-shrink:0}
+.pr-cta{display:block;text-align:center;width:100%;padding:13px 22px;border-radius:10px;font-family:var(--ff);font-size:.9rem;font-weight:600;cursor:pointer;transition:var(--tr);text-decoration:none}
+.pr-cta-primary{background:linear-gradient(135deg,var(--grn-dk),var(--grn));color:#fff;box-shadow:0 4px 16px rgba(20,184,166,.25);border:none}
+.pr-cta-primary:hover{box-shadow:0 8px 32px rgba(20,184,166,.4);transform:translateY(-1px)}
+.pr-cta-outline{background:transparent;color:var(--txt);border:1px solid var(--bdr)}
+.pr-cta-outline:hover{background:var(--card-h);border-color:rgba(20,184,166,.3);color:#fff}
+.pr-foot{text-align:center;margin-top:32px;font-size:.82rem;color:var(--txt2)}
+.pr-foot a{color:var(--grn-lt);text-decoration:underline}
+@media(max-width:700px){
+  .pr-grid{grid-template-columns:1fr;gap:20px}
+  .pr-card{padding:32px 24px}
+}
+
 /* ═══ GALLERY / LIGHTBOX ══════════════════════════════════════ */
 #gallery-sec{background:var(--g950)}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}
@@ -1756,90 +1799,90 @@ span[data-lang]{display:none}
 
 <section id="hero" style="position:relative">
   <canvas id="hero-canvas"></canvas>
-  <!-- Slide 1 -->
+  <!-- Slide 1 — Medidor Inteligente -->
   <div class="slide active" id="slide-0">
     <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&auto=format&fit=crop&q=80')"></div>
     <div class="slide-overlay"></div>
     <div class="container">
       <div class="slide-content">
-        <div class="slide-eyebrow"><span class="slide-eyebrow-dot"></span><span data-lang="es">Monitoreo energético inteligente · Panamá</span><span data-lang="en">Energy monitoring · Panama</span></div>
+        <div class="slide-eyebrow"><span class="slide-eyebrow-dot"></span><span data-lang="es">Medidor Inteligente · Panamá</span><span data-lang="en">Medidor Inteligente · Panama</span></div>
         <h1 class="slide-h1">
-          <span data-lang="es">Controla tu consumo eléctrico con <em>precisión total</em></span>
-          <span data-lang="en">Control your electricity with <em>total precision</em></span>
+          <span data-lang="es">Reduce <em>40%</em> tu factura eléctrica.</span>
+          <span data-lang="en">Cut your electric bill by <em>40%</em>.</span>
         </h1>
         <p class="slide-p">
-          <span data-lang="es">Medidor Inteligente mide, analiza y optimiza cada circuito de tu instalación eléctrica en tiempo real. Detecta ineficiencias y reduce tu factura desde el primer mes.</span>
-          <span data-lang="en">Medidor Inteligente measures, analyzes and optimizes every circuit in your electrical installation in real time. Detect inefficiencies and reduce your bill from month one.</span>
+          <span data-lang="es">Sabes exactamente cuánto consume cada habitación, cada aparato. Sin adivinar.</span>
+          <span data-lang="en">Know exactly what every room, every appliance consumes. No guessing.</span>
         </p>
         <div class="slide-btns">
-          <a href="#cta-sec" class="btn btn-primary"><span data-lang="es">Solicitar análisis gratuito →</span><span data-lang="en">Get free analysis →</span></a>
-          <a href="#solutions" class="btn btn-outline"><span data-lang="es">Ver plataforma</span><span data-lang="en">See platform</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Slide 2 -->
-  <div class="slide" id="slide-1">
-    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1600&auto=format&fit=crop&q=80')"></div>
-    <div class="slide-overlay"></div>
-    <div class="container">
-      <div class="slide-content">
-        <div class="slide-eyebrow"><span class="slide-eyebrow-dot"></span><span data-lang="es">Dashboard inteligente</span><span data-lang="en">Smart dashboard</span></div>
-        <h1 class="slide-h1">
-          <span data-lang="es">Detecta anomalías antes de que <em>se conviertan en costos</em></span>
-          <span data-lang="en">Detect anomalies before they <em>become costs</em></span>
-        </h1>
-        <p class="slide-p">
-          <span data-lang="es">Algoritmos estadísticos analizan tu consumo circuito por circuito. Alertas en tiempo real con nivel de severidad y recomendación específica.</span>
-          <span data-lang="en">Statistical algorithms analyze your consumption circuit by circuit. Real-time alerts with severity level and specific recommendation.</span>
-        </p>
-        <div class="slide-btns">
-          <a href="#dash-sec" class="btn btn-primary"><span data-lang="es">Ver el dashboard →</span><span data-lang="en">See dashboard →</span></a>
+          <a href="#cta-sec" class="btn btn-primary"><span data-lang="es">Análisis gratuito →</span><span data-lang="en">Free analysis →</span></a>
           <a href="#how" class="btn btn-outline"><span data-lang="es">Cómo funciona</span><span data-lang="en">How it works</span></a>
         </div>
       </div>
     </div>
   </div>
-  <!-- Slide 3 -->
+  <!-- Slide 2 — Dashboard -->
+  <div class="slide" id="slide-1">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1600&auto=format&fit=crop&q=80')"></div>
+    <div class="slide-overlay"></div>
+    <div class="container">
+      <div class="slide-content">
+        <div class="slide-eyebrow"><span class="slide-eyebrow-dot"></span><span data-lang="es">Datos en tiempo real</span><span data-lang="en">Real-time data</span></div>
+        <h1 class="slide-h1">
+          <span data-lang="es">El refrigerador no <em>te avisa</em> cuando falla.</span>
+          <span data-lang="en">Your fridge won't <em>tell you</em> it's broken.</span>
+        </h1>
+        <p class="slide-p">
+          <span data-lang="es">Nosotros sí. Detectamos anomalías circuito por circuito antes de que aparezcan en tu factura.</span>
+          <span data-lang="en">We will. We detect anomalies circuit by circuit before they hit your bill.</span>
+        </p>
+        <div class="slide-btns">
+          <a href="#dash-sec" class="btn btn-primary"><span data-lang="es">Ver el dashboard →</span><span data-lang="en">See the dashboard →</span></a>
+          <a href="#video-sec" class="btn btn-outline"><span data-lang="es">Ver video</span><span data-lang="en">Watch video</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Slide 3 — Empresa B2B -->
   <div class="slide" id="slide-2">
     <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&auto=format&fit=crop&q=80')"></div>
     <div class="slide-overlay"></div>
     <div class="container">
       <div class="slide-content">
-        <div class="slide-eyebrow"><span class="slide-eyebrow-dot"></span><span data-lang="es">Empresa panameña · trayectoria desde 2008</span><span data-lang="en">Panamanian company · track record since 2008</span></div>
+        <div class="slide-eyebrow"><span class="slide-eyebrow-dot"></span><span data-lang="es">Telecom · Desde 2008</span><span data-lang="en">Telecom · Since 2008</span></div>
         <h1 class="slide-h1">
-          <span data-lang="es">6 líneas de producto, <em>una sola visión</em></span>
-          <span data-lang="en">6 product lines, <em>one single vision</em></span>
+          <span data-lang="es">Fibra, RF, Data Centers — <em>llave en mano</em>.</span>
+          <span data-lang="en">Fiber, RF, Data Centers — <em>turnkey</em>.</span>
         </h1>
         <p class="slide-p">
-          <span data-lang="es">Fibra óptica, RF y cobertura, infraestructura telecom, Data Centers, monitoreo de redes y monitoreo energético inteligente — con instalación certificada y soporte técnico 24/7 en Panamá.</span>
-          <span data-lang="en">Fiber optic, RF and coverage, telecom infrastructure, Data Centers, network monitoring and smart energy monitoring — with certified installation and 24/7 technical support in Panama.</span>
+          <span data-lang="es">Suministro, instalación y soporte 24/7 para empresas e industrias en toda Panamá.</span>
+          <span data-lang="en">Supply, install and 24/7 support for businesses and industries across Panama.</span>
         </p>
         <div class="slide-btns">
-          <a href="#productos" class="btn btn-primary"><span data-lang="es">Ver catálogo →</span><span data-lang="en">View catalog →</span></a>
-          <a href="#servicios" class="btn btn-outline"><span data-lang="es">Nuestros servicios</span><span data-lang="en">Our services</span></a>
+          <a href="#productos" class="btn btn-primary"><span data-lang="es">Ver catálogo →</span><span data-lang="en">See catalog →</span></a>
+          <a href="#cta-sec" class="btn btn-outline"><span data-lang="es">Cotizar proyecto</span><span data-lang="en">Get a quote</span></a>
         </div>
       </div>
     </div>
   </div>
-  <!-- Slide 4 -->
+  <!-- Slide 4 — Catálogo -->
   <div class="slide" id="slide-3">
     <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1600&auto=format&fit=crop&q=80')"></div>
     <div class="slide-overlay"></div>
     <div class="container">
       <div class="slide-content">
-        <div class="slide-eyebrow"><span class="slide-eyebrow-dot"></span><span data-lang="es">Telecom · Fibra · Data Centers</span><span data-lang="en">Telecom · Fiber · Data Centers</span></div>
+        <div class="slide-eyebrow"><span class="slide-eyebrow-dot"></span><span data-lang="es">Más de 200 referencias</span><span data-lang="en">200+ products</span></div>
         <h1 class="slide-h1">
-          <span data-lang="es">Catálogo completo de <em>infraestructura de red</em></span>
-          <span data-lang="en">Complete catalog of <em>network infrastructure</em></span>
+          <span data-lang="es">Todo lo que necesita <em>tu red</em>.</span>
+          <span data-lang="en">Everything <em>your network</em> needs.</span>
         </h1>
         <p class="slide-p">
-          <span data-lang="es">Cables, ODF, splitters, fusionadoras, antenas, sistemas DAS, racks Prose, Data Centers KHIPU y equipos de medición N-Test. Suministro e instalación llave en mano.</span>
-          <span data-lang="en">Cables, ODF, splitters, splicers, antennas, DAS systems, Prose racks, KHIPU Data Centers and N-Test measurement equipment. Turnkey supply and installation.</span>
+          <span data-lang="es">ODF, fusionadoras, antenas DAS, racks, OTDR, KHIPU. Stock local en Panamá.</span>
+          <span data-lang="en">ODF, splicers, DAS antennas, racks, OTDR, KHIPU. Local stock in Panama.</span>
         </p>
         <div class="slide-btns">
-          <a href="#productos" class="btn btn-primary"><span data-lang="es">Ver catálogo →</span><span data-lang="en">View catalog →</span></a>
-          <a href="#cta-sec" class="btn btn-outline"><span data-lang="es">Solicitar cotización</span><span data-lang="en">Request quote</span></a>
+          <a href="#productos" class="btn btn-primary"><span data-lang="es">Buscar producto →</span><span data-lang="en">Search products →</span></a>
+          <a href="#cta-sec" class="btn btn-outline"><span data-lang="es">Hablar con ventas</span><span data-lang="en">Talk to sales</span></a>
         </div>
       </div>
     </div>
@@ -1909,6 +1952,23 @@ span[data-lang]{display:none}
         <div class="ss-lbl" style="font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,#fff,var(--grn-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em;line-height:1;margin-bottom:8px">24/7</div>
         <div class="ss-lbl"><span data-lang="es">Soporte técnico</span><span data-lang="en">Tech support</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TRUST BAR · Partners y certificaciones
+═══════════════════════════════════════════════════════════ -->
+<section id="trustbar" aria-label="Partners y tecnología certificada">
+  <div class="container">
+    <div class="tb-label"><span data-lang="es">Trabajamos con la mejor tecnología del mercado</span><span data-lang="en">Built on industry-leading technology</span></div>
+    <div class="tb-row">
+      <div class="tb-logo">EMPORIA <span>ENERGY</span></div>
+      <div class="tb-logo">ANTHROPIC <span>CLAUDE</span></div>
+      <div class="tb-logo">KHIPU <span>DATA CENTERS</span></div>
+      <div class="tb-logo">PROSE <span>RACKS</span></div>
+      <div class="tb-logo">N-TEST <span>OTDR</span></div>
+      <div class="tb-logo">EDEMET <span>· ENSA · EDECHI</span></div>
     </div>
   </div>
 </section>
@@ -2290,81 +2350,6 @@ span[data-lang]{display:none}
             <!-- filled by JS -->
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════
-     CALCULADORA detallada
-═══════════════════════════════════════════════════════════ -->
-<section id="calc-sec" class="sec">
-  <div class="container">
-    <div class="centered rv">
-      <div class="tag"><span class="tag-dot"></span><span data-lang="es">Calculadora de ahorro</span><span data-lang="en">Savings calculator</span></div>
-      <h2 class="s-title"><span data-lang="es">¿Cuánto puedes <span>ahorrar este año</span>?</span><span data-lang="en">How much can you <span>save this year</span>?</span></h2>
-      <p class="s-sub"><span data-lang="es">Ingresa tu factura actual y te calculamos el ahorro potencial con Medidor Inteligente.</span><span data-lang="en">Enter your current bill and we calculate your potential savings with Medidor Inteligente.</span></p>
-    </div>
-    <div class="calc-wrap">
-      <!-- Formulario -->
-      <div class="calc-form rv">
-        <div class="calc-field">
-          <label><span data-lang="es">Factura mensual promedio (B/.)</span><span data-lang="en">Average monthly bill (B/.)</span></label>
-          <input type="number" id="calcFactura" class="calc-input" placeholder="120" min="30" max="5000" value="120">
-        </div>
-        <div class="calc-field">
-          <label><span data-lang="es">Tipo de propiedad</span><span data-lang="en">Property type</span></label>
-          <select id="calcTipo" class="calc-select">
-            <option value="0.32" data-lang="es">🏠 Residencial (casa / apartamento)</option>
-            <option value="0.32" data-lang="en">🏠 Residential (house / apartment)</option>
-            <option value="0.38" data-lang="es">🏢 Comercial (oficina / local)</option>
-            <option value="0.38" data-lang="en">🏢 Commercial (office / store)</option>
-            <option value="0.35" data-lang="es">🏭 Industrial ligero (taller / planta)</option>
-            <option value="0.35" data-lang="en">🏭 Light industrial (workshop / plant)</option>
-            <option value="0.30" data-lang="es">🏗️ Edificio (áreas comunes)</option>
-            <option value="0.30" data-lang="en">🏗️ Building (common areas)</option>
-          </select>
-        </div>
-        <div class="calc-field">
-          <label><span data-lang="es">Circuitos (breakers) a monitorear: </span><span data-lang="en">Circuits (breakers) to monitor: </span><span id="calcCircVal" style="color:var(--grn-lt)">8</span></label>
-          <div class="calc-slider-wrap">
-            <input type="range" id="calcCirc" class="calc-slider" min="2" max="16" value="8" oninput="document.getElementById('calcCircVal').textContent=this.value;calcAhorro()">
-            <span class="calc-slider-val">8</span>
-          </div>
-        </div>
-        <button class="calc-btn" onclick="calcAhorro()">
-          <span data-lang="es">⚡ Calcular mi ahorro</span><span data-lang="en">⚡ Calculate my savings</span>
-        </button>
-      </div>
-      <!-- Resultado -->
-      <div class="calc-result rv" id="calcResult">
-        <div class="calc-result-title"><span data-lang="es">Ahorro potencial anual</span><span data-lang="en">Potential annual savings</span></div>
-        <div>
-          <div class="calc-big" id="calcBig">B/. 461</div>
-          <div class="calc-big-lbl"><span data-lang="es">estimado con Medidor Inteligente activado</span><span data-lang="en">estimated with Medidor Inteligente active</span></div>
-        </div>
-        <div class="calc-metrics">
-          <div class="calc-metric">
-            <div class="calc-metric-v" id="calcMens">B/. 38</div>
-            <div class="calc-metric-l"><span data-lang="es">Ahorro mensual</span><span data-lang="en">Monthly savings</span></div>
-          </div>
-          <div class="calc-metric">
-            <div class="calc-metric-v" id="calcRed">32%</div>
-            <div class="calc-metric-l"><span data-lang="es">Reducción estimada</span><span data-lang="en">Estimated reduction</span></div>
-          </div>
-          <div class="calc-metric">
-            <div class="calc-metric-v" id="calcRoi">14 <span style="font-size:.8rem">meses</span></div>
-            <div class="calc-metric-l">ROI</div>
-          </div>
-          <div class="calc-metric">
-            <div class="calc-metric-v" id="calcCo2">318 <span style="font-size:.7rem">kg</span></div>
-            <div class="calc-metric-l">CO₂ <span data-lang="es">evitado/año</span><span data-lang="en">avoided/year</span></div>
-          </div>
-        </div>
-        <a id="calcWaBtn" href="https://wa.me/50766743062?text=Hola%2C%20calculé%20un%20ahorro%20de%20B%2F.461%20anuales%20con%20Medidor Inteligente.%20Quiero%20más%20información." target="_blank" rel="noopener" class="calc-wa-btn">
-          💬 <span data-lang="es">Quiero este ahorro — contactar ahora</span><span data-lang="en">I want these savings — contact now</span>
-        </a>
-        <p class="calc-note"><span data-lang="es">*Estimación basada en reducción promedio documentada del 32% para propiedades residenciales y hasta 38% para comerciales. El ahorro real depende de los hábitos de consumo y equipos instalados.</span><span data-lang="en">*Estimate based on documented average reduction of 32% for residential and up to 38% for commercial. Actual savings depend on consumption habits and installed equipment.</span></p>
       </div>
     </div>
   </div>
@@ -3102,7 +3087,7 @@ span[data-lang]{display:none}
       </div>
       <div class="emp-cta-btns">
         <a href="https://wa.me/50766743062?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20los%20equipos%20Emporia%20(Vue%203%2C%20Smart%20Plug%2C%20EV%20Charger)" target="_blank" rel="noopener" class="btn btn-primary">📲 <span data-lang="es">Consultar disponibilidad</span><span data-lang="en">Check availability</span></a>
-        <a href="#calc-sec" class="btn btn-outline"><span class="ico ico-sm" style="vertical-align:-0.15em"><svg><use href="#i-trend"/></svg></span> <span data-lang="es">Calcular mi ahorro</span><span data-lang="en">Calculate my savings</span></a>
+        <a href="#simulator" class="btn btn-outline"><span class="ico ico-sm" style="vertical-align:-0.15em"><svg><use href="#i-trend"/></svg></span> <span data-lang="es">Calcular mi ahorro</span><span data-lang="en">Calculate my savings</span></a>
       </div>
     </div>
 
@@ -3231,6 +3216,58 @@ span[data-lang]{display:none}
         <div class="faq-a"><div class="faq-a-inner"><span data-lang="es">Ofrecemos soporte técnico directo vía WhatsApp (+507 6674-3062) con respuesta en menos de 2 horas en horario hábil. Para clientes con contrato de mantenimiento, ofrecemos visitas técnicas preventivas y soporte prioritario 24/7.</span><span data-lang="en">We offer direct technical support via WhatsApp (+507 6674-3062) with response in under 2 hours during business hours. For clients with maintenance contracts, we offer preventive technical visits and priority 24/7 support.</span></div></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRICING · Planes Medidor Inteligente
+═══════════════════════════════════════════════════════════ -->
+<section id="pricing" class="sec">
+  <div class="container">
+    <div class="centered rv">
+      <div class="tag"><span class="tag-dot"></span><span data-lang="es">Planes y precios</span><span data-lang="en">Plans & pricing</span></div>
+      <h2 class="s-title"><span data-lang="es">Empieza gratis. <span>Crece cuando quieras.</span></span><span data-lang="en">Start free. <span>Scale when ready.</span></span></h2>
+      <p class="s-sub"><span data-lang="es">Sin contratos. Sin sorpresas. Cancela cuando quieras.</span><span data-lang="en">No contracts. No surprises. Cancel anytime.</span></p>
+    </div>
+    <div class="pr-grid rv">
+      <div class="pr-card">
+        <div class="pr-name"><span data-lang="es">Básico</span><span data-lang="en">Basic</span></div>
+        <div class="pr-price">
+          <span class="pr-price-cur">B/.</span>
+          <span class="pr-price-num">0</span>
+          <span class="pr-price-per"><span data-lang="es">/ siempre</span><span data-lang="en">/ forever</span></span>
+        </div>
+        <p class="pr-desc"><span data-lang="es">Para hogares que quieren ver su consumo y empezar a ahorrar sin compromiso.</span><span data-lang="en">For homes that want to see their usage and start saving — no strings attached.</span></p>
+        <div class="pr-feats">
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es">Hasta <strong>4 circuitos</strong> monitoreados</span><span data-lang="en">Up to <strong>4 circuits</strong> monitored</span></div>
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es">Dashboard web en tiempo real</span><span data-lang="en">Real-time web dashboard</span></div>
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es">App móvil iOS / Android</span><span data-lang="en">iOS / Android mobile app</span></div>
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es">Historial de 30 días</span><span data-lang="en">30 days history</span></div>
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es">Soporte por email</span><span data-lang="en">Email support</span></div>
+        </div>
+        <a href="#cta-sec" class="pr-cta pr-cta-outline"><span data-lang="es">Empezar gratis</span><span data-lang="en">Start free</span></a>
+      </div>
+      <div class="pr-card featured">
+        <div class="pr-badge"><span data-lang="es">Más popular</span><span data-lang="en">Most popular</span></div>
+        <div class="pr-name">Pro</div>
+        <div class="pr-price">
+          <span class="pr-price-cur">B/.</span>
+          <span class="pr-price-num">49</span>
+          <span class="pr-price-per"><span data-lang="es">/ mes</span><span data-lang="en">/ month</span></span>
+        </div>
+        <p class="pr-desc"><span data-lang="es">Análisis con IA, alertas en tiempo real y reportes para residencias y negocios que quieren resultados.</span><span data-lang="en">AI insights, real-time alerts and reports for homes and businesses that want results.</span></p>
+        <div class="pr-feats">
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es">Hasta <strong>16 circuitos</strong> monitoreados</span><span data-lang="en">Up to <strong>16 circuits</strong> monitored</span></div>
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es"><strong>Análisis con IA</strong> (anomalías, recomendaciones)</span><span data-lang="en"><strong>AI analysis</strong> (anomalies, recommendations)</span></div>
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es">Alertas inmediatas (push, email, WhatsApp)</span><span data-lang="en">Instant alerts (push, email, WhatsApp)</span></div>
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es">Historial ilimitado · Reportes mensuales</span><span data-lang="en">Unlimited history · Monthly reports</span></div>
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es">Comparativas con tu factura EDEMET / ENSA</span><span data-lang="en">Bill comparison vs EDEMET / ENSA</span></div>
+          <div class="pr-feat"><span class="ico ico-sm"><svg><use href="#i-check"/></svg></span><span data-lang="es">Soporte prioritario 24/7</span><span data-lang="en">Priority 24/7 support</span></div>
+        </div>
+        <a href="#cta-sec" class="pr-cta pr-cta-primary"><span data-lang="es">Probar Pro 30 días gratis</span><span data-lang="en">Try Pro free for 30 days</span></a>
+      </div>
+    </div>
+    <p class="pr-foot"><span data-lang="es">¿Necesitas más circuitos o múltiples ubicaciones? <a href="#cta-sec">Habla con ventas →</a></span><span data-lang="en">Need more circuits or multiple locations? <a href="#cta-sec">Talk to sales →</a></span></p>
   </div>
 </section>
 
